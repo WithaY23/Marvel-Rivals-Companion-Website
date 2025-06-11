@@ -1,0 +1,43 @@
+
+.mainContainer
+{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr 3fr;
+    margin-top: -5px; /*move content upward slightly*/
+    background-color:lightsteelblue;
+}
+.mainHeaderContainer{
+    grid-row:2;
+    grid-column:2;
+    text-align: center;
+
+}
+.mainButtonContainer{
+    display:grid;
+    grid-row:3;
+    grid-column:2;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.mainButton{
+    border-radius:20px;
+    font-size:15px;
+    font-weight:bold;
+    height:53px;
+    margin:10px;
+}
+
+
+#characterListButton
+{
+    grid-column:1;
+}
+#randomizerButton
+{
+    grid-column:2;
+}
+#teamsButton
+{
+    grid-column:3;
+}

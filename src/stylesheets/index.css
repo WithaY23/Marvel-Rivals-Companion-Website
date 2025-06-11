@@ -1,0 +1,8 @@
+h1,h2,h3,h4,h5,h6,button
+{
+    font-family: 'Bebas Neue', sans-serif;
+}
+.button{
+    background-color: rgb(217,217,217);
+    border:none;
+}
