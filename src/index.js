@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import MainPage from './components/mainpage';
+import Controller from './components/pagecontroller';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MainPage/>
+    <Controller/>
   </React.StrictMode>
 );
 
