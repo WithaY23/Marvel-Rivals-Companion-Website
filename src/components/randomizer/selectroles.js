@@ -96,10 +96,10 @@ export default function SelectRoles(props)
     }
     else
     {
-        return <>
+        return <div  className='select-roles-container'>
                 <RoleOptions setCompleted={setCurrentRoleSelectionFinished} setClassChoice={setUpdateClassInstance} > </RoleOptions>
                 <ProgressBar selections={classInstanceArr}></ProgressBar> {/* Centered near bottom of screen to display continuous update on user's selections */}
-               </>;
+               </div>;
     }
     
 }
@@ -152,12 +152,12 @@ function RoleOptions(props)
         props.setCompleted(() => true); // Indicate that current selection is finished and to move on
         console.log("selectroles.js | RoleOptions | Set the current selection as completed and finished current selection");
     }
-    return <>
-    <img src={duelistImage} className={selection.duelist ? 'select-roles-selected' : 'select-roles-notSelected'} onClick={() =>updateCheckboxRole(Roles.Duelist)}></img> {/* Duelist */}
-    <img src={vanguardImage} className={selection.vanguard ? 'select-roles-selected' : 'select-roles-notSelected'} onClick={() =>updateCheckboxRole(Roles.Vanguard)}></img> {/* Vanguard */}
-    <img src={strategistImage} className={selection.strategist ? 'select-roles-selected' : 'select-roles-notSelected'} onClick={() =>updateCheckboxRole(Roles.Strategist)}></img> {/* Strategist */}
-    <button onClick={updatePlayerRole}>Next</button> {/* Continue to next character */}
-    </>
+    return <div className='select-roles-checkbox-container'>
+    <img src={duelistImage} className={selection.duelist ? 'select-roles-selected select-roles-duelist-checkbox' : 'select-roles-notSelected select-roles-duelist-checkbox'} onClick={() =>updateCheckboxRole(Roles.Duelist)}></img> {/* Duelist */}
+    <img src={vanguardImage} className={selection.vanguard ? 'select-roles-selected select-roles-vanguard-checkbox' : 'select-roles-notSelected select-roles-vanguard-checkbox'} onClick={() =>updateCheckboxRole(Roles.Vanguard)}></img> {/* Vanguard */}
+    <img src={strategistImage} className={selection.strategist ? 'select-roles-selected select-roles-vanguard-checkbox' : 'select-roles-notSelected select-roles-strategist-checkbox'} onClick={() =>updateCheckboxRole(Roles.Strategist)}></img> {/* Strategist */}
+    <button onClick={updatePlayerRole} className='select-roles-checkbox-next-button button'>Next</button> {/* Continue to next character */}
+    </div>
 
 }
 
@@ -196,7 +196,7 @@ function ProgressBar(props) //create a class instance? of an object with three f
     // Dummy values for meeee
     let rolesArr = props.selections;
     return (
-        <div className='select-roles-progressbar-container'> {/* Needs a container to actually contain the icons*/}
+        <div className='select-roles-progress-bar-container'> {/* Needs a container to actually contain the icons*/}
             {/* PROGRESSION BAR */}
             <ProgressBarIcons selection= {rolesArr[0]}/>
             <ProgressBarIcons selection= {rolesArr[1]}/>

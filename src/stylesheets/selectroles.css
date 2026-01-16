@@ -1,21 +1,64 @@
+.select-roles-container
+{
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr 3fr;
+    margin-top: -5px; /*move content upward slightly*/
+    background-color:lightsteelblue;
+}
+.select-roles-progress-bar-container{
+    grid-column:2;
+    grid-row:3;
+    width:20%;
+    /* Height set by height of icons */
+    display:flex;
+    justify-content: center;
+    justify-self:center;
+    margin-bottom:8%;
+}
+
 .select-roles-progress-bar-icon{
     width: 9vw;
     height: 16vh;
     border-style: solid;
 }
-.select-roles-progress-bar-container{
-    width:20%;
-    /* Height set by height of icons */
-    display:flex;
-    justify-content: center;
-    margin-bottom:8%;
+.select-roles-checkbox-container{
+    display:grid;
+    grid-column:2;
+    grid-row:1;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+
 }
 .select-roles-selected{
     width: 16vw;
     height: 25vh;
-    border: 5px, solid, rgb(255, 255, 255);
+    border: .05cm solid rgb(255, 255, 255);
 }
 .select-roles-notSelected{
     width: 16vw;
     height: 25vh;
+    margin: .05cm;
+}
+.select-roles-duelist-checkbox{
+    grid-column:1;
+    grid-row:1;
+}
+.select-roles-vanguard-checkbox{
+    grid-column:2;
+    grid-row:1;
+}
+.select-roles-strategist-checkbox{
+    grid-column:3;
+    grid-row:1;
+}
+.select-roles-checkbox-next-button{
+    grid-column:2;
+    grid-row:2;
+    width:50%;
+    height:50%;
+    align-self:center;
+    justify-self:center;
+    font-size:12pt;
+    font-weight:bold;
 }
